@@ -5,7 +5,7 @@
 ### The all‑in‑one automation bot for **Shakes & Fidget**
 
 [![Website](https://img.shields.io/badge/Website-mercysf.app-6d28d9?style=for-the-badge)](https://mercysf.app/)
-[![Download](https://img.shields.io/badge/Download-Windows%20·%20macOS%20·%20Linux-2563eb?style=for-the-badge)](https://mercysf.app/#downloads)
+[![Download](https://img.shields.io/badge/Download-Windows%20·%20macOS%20·%20Linux-2563eb?style=for-the-badge)](https://mercysf.app/downloads)
 [![Docs](https://img.shields.io/badge/Docs-Guides%20%26%20FAQ-16a34a?style=for-the-badge)](https://mercysf.app/docs/)
 
 **➡️ Website & download: [mercysf.app](https://mercysf.app/)**
@@ -19,7 +19,7 @@
 **Mercy SF** is a free, cross‑platform **Shakes & Fidget bot** (also known as an **SF bot** or **S&F bot**) that automates your entire *Shakes and Fidget* account — quests, arena, dungeons, fortress, underworld, pets, guild, and much more. It runs on **Windows, macOS, and Linux**, with a console/CLI build for servers.
 
 > 🔗 **Get started now → [https://mercysf.app](https://mercysf.app/)**
-> 📥 **Download → [https://mercysf.app/#downloads](https://mercysf.app/#downloads)**
+> 📥 **Download → [https://mercysf.app/downloads](https://mercysf.app/downloads)**
 > 📚 **Documentation → [https://mercysf.app/docs/](https://mercysf.app/docs/)**
 
 This repository is the public home of the project. It exists to point you to the official website — **[mercysf.app](https://mercysf.app/)** — where you can download the app, read the docs, and manage your account.
@@ -54,7 +54,7 @@ Full feature guides live in the **[documentation](https://mercysf.app/docs/)**.
 
 Grab the latest build for your platform from the official site:
 
-### 👉 [mercysf.app/#downloads](https://mercysf.app/#downloads)
+### 👉 [mercysf.app/downloads](https://mercysf.app/downloads)
 
 - **Windows** — Installer (`.exe`) or `.msi`
 - **macOS** — `.dmg` for Intel and Apple Silicon
@@ -63,16 +63,16 @@ Grab the latest build for your platform from the official site:
 
 ## Pricing
 
-Mercy SF has a generous **free tier**, with **Premium** and **Supporter** subscriptions that unlock the smart/advanced features and support ongoing development. See current pricing on **[mercysf.app](https://mercysf.app/#pricing)**.
+Mercy SF has a generous **free tier**, with **Premium** and **Supporter** subscriptions that unlock the smart/advanced features and support ongoing development. See current pricing on **[mercysf.app](https://mercysf.app/pricing)**.
 
 ## Documentation & Links
 
 - 🌐 **Website:** https://mercysf.app/
-- 📥 **Downloads:** https://mercysf.app/#downloads
+- 📥 **Downloads:** https://mercysf.app/downloads
 - 📚 **Docs & guides:** https://mercysf.app/docs/
-- 📝 **Changelog:** https://mercysf.app/#changelog
-- 🗺️ **Roadmap:** https://mercysf.app/#roadmap
-- 💬 **Support:** https://mercysf.app/#support
+- 📝 **Changelog:** https://mercysf.app/changelog
+- 🗺️ **Roadmap:** https://mercysf.app/roadmap
+- 💬 **Support:** https://mercysf.app/support
 - ☕ **Support the project:** https://ko-fi.com/senseiissei
 
 ## FAQ
@@ -84,10 +84,10 @@ Mercy SF is an automation bot for *Shakes & Fidget* that plays the game for you 
 No. Mercy SF is a standalone **SF bot**, not a mod or client modification. It automates your account through the same official S&F API your browser already uses.
 
 **Which platforms are supported?**
-Windows, macOS (Intel & Apple Silicon), and Linux, plus a console/CLI build. Download at **[mercysf.app/#downloads](https://mercysf.app/#downloads)**.
+Windows, macOS (Intel & Apple Silicon), and Linux, plus a console/CLI build. Download at **[mercysf.app/downloads](https://mercysf.app/downloads)**.
 
 **Is there a free version?**
-Yes — there is a free tier. Premium and Supporter tiers add the advanced features. See **[mercysf.app](https://mercysf.app/#pricing)**.
+Yes — there is a free tier. Premium and Supporter tiers add the advanced features. See **[mercysf.app](https://mercysf.app/pricing)**.
 
 ---
 
