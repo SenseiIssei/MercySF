@@ -165,7 +165,15 @@ Release notes are written in all ten before a version ships, not translated afte
 
 Built with Rust and Tauri 2, using the operating system's own WebView, so there is no bundled Chromium and no Node runtime sitting in the background.
 
-Every character runs inside the same process rather than getting one of its own, so adding characters costs very little. The window drawing the interface is the larger half of the footprint, and there is only ever one of it no matter how many accounts are running.
+Measured on Windows with four characters running and the app minimised to the tray:
+
+| | |
+| --- | --- |
+| The bot itself | about 110 MB |
+| The WebView drawing the interface | about 440 MB |
+| **Total** | **about 550 MB** |
+
+**That total barely moves when you add characters.** They share one process, and the interface is drawn by a single WebView however many accounts are active, which is where four fifths of the footprint goes. Between actions the processor is close to idle.
 
 ## Is it safe?
 
