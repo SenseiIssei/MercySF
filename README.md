@@ -177,13 +177,76 @@ Measured on Windows with four characters running and the app minimised to the tr
 
 ## Is it safe?
 
-Two separate questions, and they deserve separate answers.
+Three different questions usually get asked as one, so here they are separately.
 
-**Is the software safe?** It runs entirely on your machine. Nothing about how you play is collected, sold or sent anywhere. There is no telemetry, no advertising and nothing bundled in the installer. Your credentials are stored locally and encrypted, and there is no account server holding them.
+### Is the file safe to run?
 
-**Is automating an account safe?** That is a different question, and the honest answer is that automation can be against the game's terms of service. The consequence of a breach, whether a warning, a suspension or the loss of a character built over years, falls on you and on nobody else. Read the game's own terms and decide for yourself.
+**SHA-256 checksums for every download are published** at
+[downloads/SHA256SUMS.txt](https://mercysf.app/downloads/SHA256SUMS.txt). Comparing
+your download against that is the one check that does not require trusting
+anybody, including us.
 
-That risk is why Mercy SF is deliberately conservative about how fast it acts, and why the crawler has a per-minute rate limit rather than only a per-cycle one.
+```bash
+sha256sum -c SHA256SUMS.txt --ignore-missing     # Linux, macOS
+certutil -hashfile Mercy.SF_2.17.4_x64-setup.exe SHA256   # Windows
+```
+
+**Windows will warn you, and it will keep warning you.** Mercy SF has no code
+signing certificate, because a certificate is a yearly bill and this is free
+software. So SmartScreen shows "unknown publisher", every time, for everyone.
+That warning means the publisher is unverified. It does not mean anything was
+found in the file. Choose More info, then Run anyway, or check the checksum
+first if you would rather.
+
+There is nothing else in the installer: no toolbars, no bundled second program,
+no miner.
+
+### What does it send?
+
+Everything runs on your machine. Your credentials are stored locally and
+encrypted, and there is no account server holding them.
+
+**Nothing about how you play leaves your computer.** No account names, no server
+addresses, no characters, no progress, nothing out of the game state.
+
+**What it does send**, so you are not surprised if you ever watch the
+connection: every five minutes the app posts a handful of numbers to
+mercysf.app, and that is the complete payload.
+
+| Field | Why |
+| --- | --- |
+| A **hash** of the machine id | To count one installation once. The id itself never leaves the machine |
+| The app version | To know whether a release has reached anybody before pushing the next one |
+| How many sessions and bots are running | Counts, never names |
+| The platform string | So a Linux-only regression is visible as one |
+
+Two other outbound connections exist and both are worth naming. The app checks
+mercysf.app for a new version. And if you leave coupon crawling on, it fetches
+the publicly listed Shakes & Fidget codes from a handful of code-list sites,
+which is the only time it talks to anyone other than the game and us. Switching
+`auto_coupon_crawl` off stops it, and codes from your in-game mail still work.
+
+### What about a backdoor?
+
+Worth being straight about the limits. The source is not public, so you cannot
+read it. What you can do is verify the file against a published checksum, and
+watch what it connects to, which is why the payload above is written out field
+by field rather than summarised as "some anonymous statistics".
+
+A virus scanner would not settle this question either way: it matches known
+malware signatures, and it has nothing to say about what a program's author
+chose to put in it.
+
+### Could my game account be banned?
+
+Possibly, and this is the risk that actually matters. Automation can be against
+the game's terms of service. The consequence of a breach, whether a warning, a
+suspension or the loss of a character built over years, falls on you and on
+nobody else. Read the game's own terms and decide for yourself.
+
+That risk is why Mercy SF is deliberately conservative about how fast it acts,
+and why the crawler has a per-minute rate limit rather than only a per-cycle
+one.
 
 ## Links
 
