@@ -15,7 +15,7 @@
 ![Modules](https://img.shields.io/badge/modules-26-0a0708?style=flat-square)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20Tauri%202-0a0708?style=flat-square)
 
-[![Mercy SF](https://mercysf.app/og-image.png)](https://mercysf.app/)
+[![Mercy SF](https://mercysf.app/og-image.png?v=2)](https://mercysf.app/)
 
 **[mercysf.app](https://mercysf.app/)** &nbsp;·&nbsp; [Download](https://mercysf.app/downloads) &nbsp;·&nbsp; [Documentation](https://mercysf.app/docs/) &nbsp;·&nbsp; [Changelog](https://mercysf.app/changelog) &nbsp;·&nbsp; [Discord](https://discord.gg/m8MCJtDgXc)
 
@@ -28,6 +28,14 @@
 It is a standalone desktop application, not a game mod. It signs in through the official single sign-on and drives your account through the game's own interface, sending the same requests your browser sends. Nothing is injected and nothing is patched.
 
 **Everything is free.** Every module is unlocked for everyone. There is no licence key, no supporter tier that gets the good features, and no trial.
+
+<div align="center">
+
+<img src="https://mercysf.app/docs/screenshots/overview.png?v=6" alt="Every account in one window, with what each one is doing right now" width="900">
+
+<sub>Every account in one window. What each one is doing, and what it will do next.</sub>
+
+</div>
 
 > This repository is the public home of the project and exists to point you at the website. The application itself is distributed from **[mercysf.app/downloads](https://mercysf.app/downloads)**.
 
@@ -68,6 +76,14 @@ Twenty-six modules, each with a page in the documentation explaining what it dec
 | **Battle simulator** | Turns "should I attack this player" into a number, with a full round by round replay of any fight |
 | **Hall of Fame** | Search and a player pool the hunt draws from |
 
+<div align="center">
+
+<img src="https://mercysf.app/docs/screenshots/arena.png?v=6" alt="The arena screen showing each candidate scored on items, experience and rank" width="900">
+
+<sub>The arena does not just report a result. It shows every candidate it weighed, what each was worth, and which one won.</sub>
+
+</div>
+
 ### The timed events
 
 This is the part most bots leave out, and the part that costs the most clicks to play by hand.
@@ -78,6 +94,14 @@ This is the part most bots leave out, and the part that costs the most clicks to
 | **Hellevator** | Climbs on key cards and buys a treat from Beelzebub's Emporium once a fight is actually lost, because a treat lasts two floors and one bought at the bottom helps where no help was needed |
 | **Legendary Dungeon** | Doors, encounters, blessings and curses, with three separate ceilings on what reviving may cost |
 | **Event detection** | Works out which event is genuinely running instead of firing at one that closed on Sunday, which is harder than it sounds because the server keeps sending the data afterwards |
+
+<div align="center">
+
+<img src="https://mercysf.app/docs/screenshots/events.png?v=6" alt="The events tab during a live World Boss and Hellevator" width="900">
+
+<sub>The events tab, with only the events that are genuinely running.</sub>
+
+</div>
 
 ### Economy, guild and control
 
@@ -95,6 +119,15 @@ This is the part most bots leave out, and the part that costs the most clicks to
 
 Full guides: **[mercysf.app/docs](https://mercysf.app/docs/)**
 
+<div align="center">
+
+<img src="https://mercysf.app/docs/screenshots/serverstart.png?v=6" alt="The server start screen showing the current phase and what it is holding back" width="440">
+<img src="https://mercysf.app/docs/screenshots/analytics.png?v=6" alt="Analytics showing whether last week's change actually helped" width="440">
+
+<sub>Left: the opening of a fresh server, in phases, naming every module it is holding back. Right: whether last week's change actually helped.</sub>
+
+</div>
+
 ## Mushrooms are real money, so nothing spends them by default
 
 Every single feature that can spend a mushroom is a separate switch, and every one of them ships off. On top of those there are two limits that protect different things:
@@ -105,6 +138,14 @@ Every single feature that can spend a mushroom is a separate switch, and every o
 | `mushroom_budget_*` | **The rate.** Use at most twenty a week, for example |
 
 You want both. An account that earns mushrooms steadily can sit above its floor forever while spending everything it earns, and a floor alone cannot see that.
+
+<div align="center">
+
+<img src="https://mercysf.app/docs/screenshots/mushrooms.png?v=6" alt="The mushroom spending settings, every switch off by default" width="900">
+
+<sub>Every switch that can spend a mushroom, in one place, all of them off.</sub>
+
+</div>
 
 ## It tells you what it is doing
 
@@ -122,7 +163,9 @@ Release notes are written in all ten before a version ships, not translated afte
 
 ## What it costs to run
 
-Built with Rust and Tauri 2, using the operating system's own WebView. There is no bundled Chromium and no Node runtime in the background. About 200 MB of memory per running character.
+Built with Rust and Tauri 2, using the operating system's own WebView, so there is no bundled Chromium and no Node runtime sitting in the background.
+
+Every character runs inside the same process rather than getting one of its own, so adding characters costs very little. The window drawing the interface is the larger half of the footprint, and there is only ever one of it no matter how many accounts are running.
 
 ## Is it safe?
 
