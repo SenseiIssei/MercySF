@@ -206,25 +206,12 @@ no miner.
 Everything runs on your machine. Your credentials are stored locally and
 encrypted, and there is no account server holding them.
 
-**Nothing about how you play leaves your computer.** No account names, no server
-addresses, no characters, no progress, nothing out of the game state.
+**Nothing about how you play is collected or sold.** No account names, no server
+addresses, no characters, no progress, nothing out of the game state. There is
+no advertising and nothing bundled in the installer.
 
-**What it does send**, so you are not surprised if you ever watch the
-connection: every five minutes the app posts a handful of numbers to
-mercysf.app, and that is the complete payload.
-
-| Field | Why |
-| --- | --- |
-| A **hash** of the machine id | To count one installation once. The id itself never leaves the machine |
-| The app version | To know whether a release has reached anybody before pushing the next one |
-| How many sessions and bots are running | Counts, never names |
-| The platform string | So a Linux-only regression is visible as one |
-
-Two other outbound connections exist and both are worth naming. The app checks
-mercysf.app for a new version. And if you leave coupon crawling on, it fetches
-the publicly listed Shakes & Fidget codes from a handful of code-list sites,
-which is the only time it talks to anyone other than the game and us. Switching
-`auto_coupon_crawl` off stops it, and codes from your in-game mail still work.
+What the application transmits, and on what legal basis, is set out in the
+[privacy policy](https://mercysf.app/datenschutz).
 
 ### What about a backdoor?
 
