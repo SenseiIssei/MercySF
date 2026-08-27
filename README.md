@@ -10,7 +10,7 @@
 [![Download](https://img.shields.io/badge/Download-Windows%20·%20macOS%20·%20Linux-e01020?style=for-the-badge&labelColor=0a0708)](https://mercysf.app/downloads)
 [![Docs](https://img.shields.io/badge/Docs-10%20languages-e01020?style=for-the-badge&labelColor=0a0708)](https://mercysf.app/docs/)
 
-![Version](https://img.shields.io/badge/version-2.17.4-0a0708?style=flat-square)
+![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmercysf.app%2Fupdate.json&query=%24.version&prefix=v&label=version&color=0a0708&style=flat-square)
 ![Price](https://img.shields.io/badge/price-free,%20no%20tiers-0a0708?style=flat-square)
 ![Modules](https://img.shields.io/badge/modules-26-0a0708?style=flat-square)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20Tauri%202-0a0708?style=flat-square)
@@ -188,7 +188,7 @@ anybody, including us.
 
 ```bash
 sha256sum -c SHA256SUMS.txt --ignore-missing     # Linux, macOS
-certutil -hashfile Mercy.SF_2.17.4_x64-setup.exe SHA256   # Windows
+certutil -hashfile Mercy.SF_<version>_x64-setup.exe SHA256   # Windows
 ```
 
 **Windows will warn you, and it will keep warning you.** Mercy SF has no code
