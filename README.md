@@ -47,8 +47,9 @@ It is a standalone desktop application, not a game mod. It signs in through the 
 | --- | --- |
 | **Windows** | `.exe` installer or `.msi` |
 | **macOS** | `.dmg` for Apple Silicon and Intel |
-| **Linux** | `.AppImage` and `.deb` |
-| **Headless** | CLI binaries for Windows, macOS and Linux, including ARM64 for a Raspberry Pi |
+| **Linux** | `.AppImage` and `.deb`, for x64 and ARM64 |
+| **Android** | `.apk` (beta), connects to your own Mercy SF running elsewhere |
+| **Headless** | CLI and node binaries for Windows and Linux, including ARM64 for a Raspberry Pi |
 
 No account is needed to download. The desktop app keeps itself up to date, every build is signed, and the updater verifies the signature before installing. Your accounts and settings survive an update.
 
@@ -62,7 +63,7 @@ Twenty-six modules, each with a page in the documentation explaining what it dec
 | --- | --- |
 | **Quests, tavern, expeditions** | Ranks the three quests on offer by reward per second rather than by raw reward, handles beer and the thirst for adventure, and prefers an expedition where the server has them |
 | **Dungeons, Twister and Tower** | Simulates the current enemy of every open dungeon and fights the one it is most likely to win, so a free fight is never spent on a loss |
-| **Fortress** | Gathers wood, stone and silver, searches the gem mine, queues building upgrades, and runs attacks when you allow them |
+| **Fortress** | Gathers wood, stone and silver, searches the gem mine, queues building upgrades (each building can be capped at a level you choose), and runs attacks when you allow them |
 | **Underworld** | Collects souls and silver, upgrades buildings, and respects your build caps |
 | **Pets** | Feeding, pet dungeons, pet arena and habitat exploration |
 | **Daily rewards** | Calendar, wheel of fortune, dice game, toilet and the mount, plus coupon codes |
@@ -71,7 +72,7 @@ Twenty-six modules, each with a page in the documentation explaining what it dec
 
 | Module | What it does |
 | --- | --- |
-| **Arena** | Scores every candidate on missing scrapbook items, daily experience and rank, multiplies by the simulated win chance, and names the opponent it will fight next and why |
+| **Arena** | Weighs every candidate by the honour it is expected to bring: the simulated win chance, corrected by how past fights against that class and that very player actually went, against what a loss costs. Scrapbook items and daily experience count on top, and when no fight is worth it, it waits instead of losing honour |
 | **Scrapbook hunting** | Crawls the Hall of Fame in the background and attacks the beatable player carrying the most items your album is still missing, across the whole server rather than the three the arena suggests |
 | **Battle simulator** | Turns "should I attack this player" into a number, with a full round by round replay of any fight |
 | **Hall of Fame** | Search and a player pool the hunt draws from |
@@ -260,7 +261,7 @@ No. It is a standalone application that talks to the same official servers your 
 No. Every module is unlocked for everyone, with no licence key, no supporter tier and no trial.
 
 **Which platforms?**
-Windows, macOS on both Apple Silicon and Intel, and Linux, plus a headless CLI build that also runs on ARM64 boards.
+Windows, macOS on both Apple Silicon and Intel, and Linux on x64 and ARM64, plus a headless CLI build for servers and a Raspberry Pi. An Android app (beta) connects to a Mercy SF you run elsewhere.
 
 **Can it run several accounts?**
 Yes. Each character keeps its own settings, schedule and log, and one overview screen shows all of them.
